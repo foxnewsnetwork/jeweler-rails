@@ -36,7 +36,7 @@ end # dev group), :after => "source 'https://rubygems.org'\n"
 		end # rails_version
 		
 		def show_readme
-			readme( "REAMDE" )
+			readme( "README" )
 		end # show_readme
 	end # JewelerGenerator
 end # Jeweler
