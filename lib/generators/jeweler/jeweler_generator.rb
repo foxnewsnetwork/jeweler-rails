@@ -3,15 +3,21 @@ module Jeweler
 		source_root File.expand_path('../templates', __FILE__)
 		desc "Setups jeweler functionality in your current rails app to help you " <<
 			"build your rails gem"
-		
+		namespace :jeweler
 		def copy_rakefile
-			copy_file "Rakefile", "lib/tasks/jeweler.rake"
+			template "Rakefile", "lib/tasks/jeweler.rake"
 		end # copy_rakefile
 		
 		def copy_document
 			copy_file ".document", ".document"
 		end # copy_document
-		
+
+		def create_gemlib
+			create_file "lib/#{file_name}.rb" do
+				"# Write your gem code in here!"
+			end # create_file
+		end # create_gemlib
+				
 		def create_bin
 			directory "bin"
 		end # create_bin
@@ -24,6 +30,10 @@ module Jeweler
   gem "jeweler", "~> 1.8.4"
 end # dev group), :after => "source 'https://rubygems.org'\n"
 		end # inject_gemfile
+		
+		def rails_version
+			Rails.version
+		end # rails_version
 		
 		def show_readme
 			readme( "REAMDE" )
