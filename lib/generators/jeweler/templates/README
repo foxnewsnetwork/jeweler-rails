@@ -1,0 +1,10 @@
+======================================================================
+	Stuff you need to do before you can publish your gem.
+	
+	0. Run bundle install
+	1. Setup your gemspecs in lib/tasks/jeweler.rake
+	2. Make sure you've initialized your rails app into a git repo
+	
+	Read the Jeweler guide on github to get a quick pick-up on how to
+	build gems.
+=====================================================================

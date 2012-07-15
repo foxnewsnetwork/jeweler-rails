@@ -1,0 +1,15 @@
+Description:
+    A set of simple macros which puts jeweler into the rails generate command
+    to make developing rails gems a little easier. Follow the good ol' Jeweler
+    guide on making gems to make your gem. Because Jeweler requires git, make 
+    sure you've already initialized your git repo in this joint.
+
+Example:
+    rails generate jeweler Thing
+
+    This will create:
+        lib/tasks/jeweler.rake
+        .document
+    
+    This will modify:
+    		Gemfile
