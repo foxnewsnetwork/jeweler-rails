@@ -19,7 +19,7 @@ module Jeweler
 		end # create_gemlib
 				
 		def create_bin
-			directory "bin"
+			empty_dir "bin"
 		end # create_bin
 		
 		def inject_gemfile
