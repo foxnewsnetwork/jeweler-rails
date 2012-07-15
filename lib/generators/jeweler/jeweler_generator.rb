@@ -4,6 +4,7 @@ module Jeweler
 		desc "Setups jeweler functionality in your current rails app to help you " <<
 			"build your rails gem"
 		namespace :jeweler
+		
 		def copy_rakefile
 			template "Rakefile", "lib/tasks/jeweler.rake"
 		end # copy_rakefile
@@ -23,12 +24,12 @@ module Jeweler
 		end # create_bin
 		
 		def inject_gemfile
-			insert_into_file "Gemfile", %Q(group :development do
-  gem "shoulda", ">= 0"
-  gem "rdoc", "~> 3.12"
-  gem "bundler", "~> 1.0.0"
-  gem "jeweler", "~> 1.8.4"
-end # dev group), :after => "source 'https://rubygems.org'\n"
+			gem_group :development, :test do
+				gem "shoulda", ">= 0"
+				gem "rdoc", "~> 3.12"
+				gem "bundler", "~> 1.0.0"
+				gem "jeweler", "~> 1.8.4"
+			end # gem_group
 		end # inject_gemfile
 		
 		def rails_version
