@@ -1,1 +1,3 @@
-# Write your gem code in here!
+module Jeweler
+	
+end # Jeweler

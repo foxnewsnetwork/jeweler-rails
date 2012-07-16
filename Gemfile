@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
+gem "jeweler", "~> 1.8.4"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -37,9 +38,10 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
-group :development, :test do
+group :development do
   gem "shoulda", ">= 0"
   gem "rdoc", "~> 3.12"
   gem "bundler", "~> 1.0.0"
   gem "jeweler", "~> 1.8.4"
+  gem "rspec"
 end

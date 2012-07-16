@@ -15,14 +15,14 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "<%= file_name %>"
-  gem.homepage = "TODO: link to your gem's homepage"
+  gem.homepage = "<%= homepage_name %>"
   gem.license = "MIT"
   gem.summary = %Q{TODO: one-line summary of your gem}
   gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "TODO: your email"
-  gem.authors = ["TODO: your contributors"]
+  gem.email = "<%= user_email %>"
+  gem.authors = ["<%= user_name %>"]
   # dependencies defined in Gemfile
-  gem.add_dependency "rails", "~><%= rails_version %>}"
+  gem.add_dependency "rails", "~><%= rails_version %>"
 end
 Jeweler::RubygemsDotOrgTasks.new
 

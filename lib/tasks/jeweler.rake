@@ -15,14 +15,14 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "jeweler_rails"
-  gem.homepage = "https://github.com/foxnewsnetwork/cookicutter"
+  gem.homepage = "https://github.com/foxnewsnetwork/jeweler-rails"
   gem.license = "MIT"
-  gem.summary = %Q{Simple macro that combines rail and jeweler to allow for simple rails gem building}
-  gem.description = %Q{Rails-jeweler gem which just puts jeweler into the generator. Does not mess with any of the functionality of jeweler.}
+  gem.summary = %Q{Jeweler macros for making rails gems}
+  gem.description = %Q{All of functions of the jeweler now rolled into the rails generator. Hopefully, this will make generating rails gems from within rails apps a little easier.}
   gem.email = "foxnewsnetwork@gmail.com"
   gem.authors = ["Yuki Nagato"]
   # dependencies defined in Gemfile
-  gem.add_dependency "rails", "~>3.2.6}"
+  gem.add_dependency "rails", ">=3.0.10"
 end
 Jeweler::RubygemsDotOrgTasks.new
 
